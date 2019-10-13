@@ -89,7 +89,8 @@ public class StaffLogin {
 				String j="jinit";
 				if(name.equals(j) && password.equals(j)) {
 						JOptionPane.showMessageDialog( frame1,"Succesfully Logged In");	
-					
+						StaffInfoScreen staffInfoScreen=new StaffInfoScreen();
+						staffInfoScreen.main(null);
 					System.out.println("hello");
 				}else
 				{

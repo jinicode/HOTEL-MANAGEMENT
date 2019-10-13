@@ -68,39 +68,50 @@ public class CustomerLogin {
 		frame.getContentPane().add(lblRoomNo);
 
 		JButton btnLogin = new JButton("Login");
-		Image image=new ImageIcon(this.getClass().getResource("/login24.png")).getImage();
+		Image image = new ImageIcon(this.getClass().getResource("/login24.png")).getImage();
 		btnLogin.setIcon(new ImageIcon(image));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String roomno = textField.getText();
 				String Id = textField_1.getText();
 				String i = "101";
-				String j = "101";
-				String k = "102";
-				String l = "103";
-				String m="jinit";
-//				if((roomno.equals(j) && Id.equals(j))||(roomno.equals(k) && Id.equals(k))||(roomno.equals(l) && Id.equals(l))) {
-//						JOptionPane.showMessageDialog( frame1,"Succesfully Logged In");	
-//						CustomerSupport customerSupport=new CustomerSupport(roomid);
-//						customerSupport.main(null);
-//					
-//					System.out.println("hello");
-//				}else
-//				{
-//					JOptionPane.showMessageDialog( frame1,"Failed to log In");
-//				}
-				if ((roomno.equals(j) && Id.equals(m))) {
+				String j = "102";
+				String k = "103";
+				String l = "104";
+				String m = "105";
+				String n = "106";
+				String o = "107";
+				String p = "108";
+				String q = "109";
+				String r = "jinit";
+
+				if ((roomno.equals(i) && Id.equals(r))) {
 					int roomid = 101;
 					CustomerSupport customerSupport = new CustomerSupport(roomid);
 
-				} else if ((roomno.equals(k) && Id.equals(m))) {
+				} else if ((roomno.equals(j) && Id.equals(r))) {
 					int roomid = 102;
 					CustomerSupport customerSupport = new CustomerSupport(roomid);
-				} else if ((roomno.equals(l) && Id.equals(m))) {
+				} else if ((roomno.equals(k) && Id.equals(r))) {
 					int roomid = 103;
 					CustomerSupport customerSupport = new CustomerSupport(roomid);
-				} else if ((roomno.equals(i) && Id.equals(m))) {
-					int roomid = 103;
+				} else if ((roomno.equals(l) && Id.equals(r))) {
+					int roomid = 104;
+					CustomerSupport customerSupport = new CustomerSupport(roomid);
+				}else if ((roomno.equals(m) && Id.equals(r))) {
+					int roomid = 105;
+					CustomerSupport customerSupport = new CustomerSupport(roomid);
+				} else if ((roomno.equals(n) && Id.equals(r))) {
+					int roomid = 106;
+					CustomerSupport customerSupport = new CustomerSupport(roomid);
+				}else if ((roomno.equals(o) && Id.equals(r))) {
+					int roomid = 107;
+					CustomerSupport customerSupport = new CustomerSupport(roomid);
+				}else if ((roomno.equals(p) && Id.equals(r))) {
+					int roomid = 108;
+					CustomerSupport customerSupport = new CustomerSupport(roomid);
+				}else if ((roomno.equals(q) && Id.equals(r))) {
+					int roomid = 109;
 					CustomerSupport customerSupport = new CustomerSupport(roomid);
 				} else {
 					JOptionPane.showMessageDialog(frame1, "Failed to log In");
@@ -121,9 +132,9 @@ public class CustomerLogin {
 		textField_1.setBounds(279, 232, 246, 35);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
-		
+
 		JLabel lblFam = new JLabel("");
-		Image image2=new ImageIcon(this.getClass().getResource("/fam64.png")).getImage();
+		Image image2 = new ImageIcon(this.getClass().getResource("/fam64.png")).getImage();
 		lblFam.setIcon(new ImageIcon(image2));
 		lblFam.setBounds(25, 158, 96, 98);
 		frame.getContentPane().add(lblFam);

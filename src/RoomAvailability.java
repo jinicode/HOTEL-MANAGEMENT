@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 import java.util.Date;
+import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import javax.swing.JFrame;
@@ -108,7 +109,9 @@ public class RoomAvailability {
 		JButton btnSave = new JButton("GET ROOM");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(frame1, "Your room no is R0003 and password is jinit");
+				//int k=((Math.random()*(5)) + 1);
+				Random r=new Random();
+				JOptionPane.showMessageDialog(frame1, "Your room no is R000" +(r.nextInt(10)+1)+  " and password is jinit");
 
 			}
 		});

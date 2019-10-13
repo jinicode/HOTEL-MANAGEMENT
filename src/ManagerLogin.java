@@ -85,7 +85,9 @@ public class ManagerLogin {
 					JOptionPane.showMessageDialog( frame1,"Succesfully Logged In");	
 					
 					System.out.println("hello");
-				}else
+					ManagerInfoScreen managerInfoScreen=new ManagerInfoScreen();
+					managerInfoScreen.main(null);
+					}else
 				{
 					JOptionPane.showMessageDialog( frame1,"Failed to log In");
 				}
