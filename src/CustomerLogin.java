@@ -80,9 +80,6 @@ public class CustomerLogin {
 				String l = "104";
 				String m = "105";
 				String n = "106";
-				String o = "107";
-				String p = "108";
-				String q = "109";
 				String r = "jinit";
 
 				if ((roomno.equals(i) && Id.equals(r))) {
@@ -104,17 +101,8 @@ public class CustomerLogin {
 				} else if ((roomno.equals(n) && Id.equals(r))) {
 					int roomid = 106;
 					CustomerSupport customerSupport = new CustomerSupport(roomid);
-				}else if ((roomno.equals(o) && Id.equals(r))) {
-					int roomid = 107;
-					CustomerSupport customerSupport = new CustomerSupport(roomid);
-				}else if ((roomno.equals(p) && Id.equals(r))) {
-					int roomid = 108;
-					CustomerSupport customerSupport = new CustomerSupport(roomid);
-				}else if ((roomno.equals(q) && Id.equals(r))) {
-					int roomid = 109;
-					CustomerSupport customerSupport = new CustomerSupport(roomid);
 				} else {
-					JOptionPane.showMessageDialog(frame1, "Failed to log In");
+					JOptionPane.showMessageDialog(frame1, "Failed to log In due to invalid credentials");
 				}
 
 			}

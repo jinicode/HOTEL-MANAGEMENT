@@ -111,7 +111,7 @@ public class RoomAvailability {
 			public void actionPerformed(ActionEvent e) {
 				//int k=((Math.random()*(5)) + 1);
 				Random r=new Random();
-				JOptionPane.showMessageDialog(frame1, "Your room no is R000" +(r.nextInt(10)+1)+  " and password is jinit");
+				JOptionPane.showMessageDialog(frame1, "Your room no is R000" +(r.nextInt(6)+1)+  " and password is jinit");
 
 			}
 		});
