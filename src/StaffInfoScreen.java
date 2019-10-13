@@ -127,59 +127,55 @@ public class StaffInfoScreen {
 					ResultSet rs5 = (ResultSet) pr5.executeQuery();
 					ResultSet rs6 = (ResultSet) pr6.executeQuery();
 
-					while(rs1.next()) {
-					
-					textField_1.setText(rs1.getString(2));
-					textField_2.setText("" + rs1.getInt(3));
-					textField_3.setText("" + rs1.getInt(4));
-					textField_4.setText("" + rs1.getInt(5));
-					textField_5.setText(rs1.getString(6));
-					textField_6.setText(rs1.getString(7));
+					while (rs1.next()) {
+
+						textField_1.setText(rs1.getString(2));
+						textField_2.setText("" + rs1.getInt(3));
+						textField_3.setText("" + rs1.getInt(4));
+						textField_4.setText("" + rs1.getInt(5));
+						textField_5.setText(rs1.getString(6));
+						textField_6.setText(rs1.getString(7));
 					}
-					while(rs2.next()) {
-					
-					textField_8.setText(rs2.getString(2));
-					textField_9.setText("" + rs2.getInt(3));
-					textField_10.setText("" + rs2.getInt(4));
-					textField_11.setText("" + rs2.getInt(5));
-					textField_12.setText(rs2.getString(6));
-					textField_13.setText(rs2.getString(7));
+					while (rs2.next()) {
+
+						textField_8.setText(rs2.getString(2));
+						textField_9.setText("" + rs2.getInt(3));
+						textField_10.setText("" + rs2.getInt(4));
+						textField_11.setText("" + rs2.getInt(5));
+						textField_12.setText(rs2.getString(6));
+						textField_13.setText(rs2.getString(7));
 					}
-					while(rs3.next())
-					{
-					textField_15.setText(rs3.getString(2));
-					textField_16.setText("" + rs3.getInt(3));
-					textField_17.setText("" + rs3.getInt(4));
-					textField_18.setText("" + rs3.getInt(5));
-					textField_19.setText(rs3.getString(6));
-					textField_20.setText(rs3.getString(7));
+					while (rs3.next()) {
+						textField_15.setText(rs3.getString(2));
+						textField_16.setText("" + rs3.getInt(3));
+						textField_17.setText("" + rs3.getInt(4));
+						textField_18.setText("" + rs3.getInt(5));
+						textField_19.setText(rs3.getString(6));
+						textField_20.setText(rs3.getString(7));
 					}
-					while(rs4.next())
-					{
-					textField_22.setText(rs4.getString(2));
-					textField_23.setText("" + rs4.getInt(3));
-					textField_24.setText("" + rs4.getInt(4));
-					textField_25.setText("" + rs4.getInt(5));
-					textField_26.setText(rs4.getString(6));
-					textField_27.setText(rs4.getString(7));
+					while (rs4.next()) {
+						textField_22.setText(rs4.getString(2));
+						textField_23.setText("" + rs4.getInt(3));
+						textField_24.setText("" + rs4.getInt(4));
+						textField_25.setText("" + rs4.getInt(5));
+						textField_26.setText(rs4.getString(6));
+						textField_27.setText(rs4.getString(7));
 					}
-					while(rs5.next())
-					{
-					textField_29.setText(rs5.getString(2));
-					textField_30.setText("" + rs5.getInt(3));
-					textField_31.setText("" + rs5.getInt(4));
-					textField_32.setText("" + rs5.getInt(5));
-					textField_33.setText(rs5.getString(6));
-					textField_34.setText(rs5.getString(7));
+					while (rs5.next()) {
+						textField_29.setText(rs5.getString(2));
+						textField_30.setText("" + rs5.getInt(3));
+						textField_31.setText("" + rs5.getInt(4));
+						textField_32.setText("" + rs5.getInt(5));
+						textField_33.setText(rs5.getString(6));
+						textField_34.setText(rs5.getString(7));
 					}
-					while(rs6.next())
-					{
-					textField_36.setText(rs6.getString(2));
-					textField_37.setText("" + rs6.getInt(3));
-					textField_38.setText("" + rs6.getInt(4));
-					textField_39.setText("" + rs6.getInt(5));
-					textField_40.setText(rs6.getString(6));
-					textField_41.setText(rs6.getString(7));
+					while (rs6.next()) {
+						textField_36.setText(rs6.getString(2));
+						textField_37.setText("" + rs6.getInt(3));
+						textField_38.setText("" + rs6.getInt(4));
+						textField_39.setText("" + rs6.getInt(5));
+						textField_40.setText(rs6.getString(6));
+						textField_41.setText(rs6.getString(7));
 					}
 
 				} catch (ClassNotFoundException e1) {
@@ -287,152 +283,152 @@ public class StaffInfoScreen {
 		textField_13.setColumns(10);
 		textField_13.setBounds(684, 214, 100, 20);
 		frame.getContentPane().add(textField_13);
-		
+
 		textField_15 = new JTextField();
 		textField_15.setColumns(10);
 		textField_15.setBounds(81, 275, 190, 20);
 		frame.getContentPane().add(textField_15);
-		
+
 		textField_16 = new JTextField();
 		textField_16.setColumns(10);
 		textField_16.setBounds(305, 275, 63, 20);
 		frame.getContentPane().add(textField_16);
-		
+
 		textField_17 = new JTextField();
 		textField_17.setColumns(10);
 		textField_17.setBounds(389, 275, 62, 20);
 		frame.getContentPane().add(textField_17);
-		
+
 		textField_18 = new JTextField();
 		textField_18.setColumns(10);
 		textField_18.setBounds(484, 275, 62, 20);
 		frame.getContentPane().add(textField_18);
-		
+
 		textField_19 = new JTextField();
 		textField_19.setColumns(10);
 		textField_19.setBounds(556, 275, 98, 20);
 		frame.getContentPane().add(textField_19);
-		
+
 		textField_20 = new JTextField();
 		textField_20.setColumns(10);
 		textField_20.setBounds(688, 275, 96, 20);
 		frame.getContentPane().add(textField_20);
-		
+
 		textField_22 = new JTextField();
 		textField_22.setColumns(10);
 		textField_22.setBounds(81, 335, 190, 20);
 		frame.getContentPane().add(textField_22);
-		
+
 		textField_23 = new JTextField();
 		textField_23.setColumns(10);
 		textField_23.setBounds(305, 335, 63, 20);
 		frame.getContentPane().add(textField_23);
-		
+
 		textField_24 = new JTextField();
 		textField_24.setColumns(10);
 		textField_24.setBounds(389, 335, 62, 20);
 		frame.getContentPane().add(textField_24);
-		
+
 		textField_25 = new JTextField();
 		textField_25.setColumns(10);
 		textField_25.setBounds(484, 335, 62, 20);
 		frame.getContentPane().add(textField_25);
-		
+
 		textField_26 = new JTextField();
 		textField_26.setColumns(10);
 		textField_26.setBounds(556, 335, 98, 20);
 		frame.getContentPane().add(textField_26);
-		
+
 		textField_27 = new JTextField();
 		textField_27.setColumns(10);
 		textField_27.setBounds(688, 335, 96, 20);
 		frame.getContentPane().add(textField_27);
-		
+
 		textField_29 = new JTextField();
 		textField_29.setColumns(10);
 		textField_29.setBounds(81, 391, 190, 20);
 		frame.getContentPane().add(textField_29);
-		
+
 		textField_30 = new JTextField();
 		textField_30.setColumns(10);
 		textField_30.setBounds(305, 391, 63, 20);
 		frame.getContentPane().add(textField_30);
-		
+
 		textField_31 = new JTextField();
 		textField_31.setColumns(10);
 		textField_31.setBounds(389, 391, 62, 20);
 		frame.getContentPane().add(textField_31);
-		
+
 		textField_32 = new JTextField();
 		textField_32.setColumns(10);
 		textField_32.setBounds(484, 391, 62, 20);
 		frame.getContentPane().add(textField_32);
-		
+
 		textField_33 = new JTextField();
 		textField_33.setColumns(10);
 		textField_33.setBounds(556, 391, 98, 20);
 		frame.getContentPane().add(textField_33);
-		
+
 		textField_34 = new JTextField();
 		textField_34.setColumns(10);
 		textField_34.setBounds(684, 391, 100, 20);
 		frame.getContentPane().add(textField_34);
-		
+
 		textField_36 = new JTextField();
 		textField_36.setColumns(10);
 		textField_36.setBounds(80, 453, 191, 20);
 		frame.getContentPane().add(textField_36);
-		
+
 		textField_37 = new JTextField();
 		textField_37.setColumns(10);
 		textField_37.setBounds(305, 453, 63, 20);
 		frame.getContentPane().add(textField_37);
-		
+
 		textField_38 = new JTextField();
 		textField_38.setColumns(10);
 		textField_38.setBounds(389, 453, 62, 20);
 		frame.getContentPane().add(textField_38);
-		
+
 		textField_39 = new JTextField();
 		textField_39.setColumns(10);
 		textField_39.setBounds(484, 453, 62, 20);
 		frame.getContentPane().add(textField_39);
-		
+
 		textField_40 = new JTextField();
 		textField_40.setColumns(10);
 		textField_40.setBounds(556, 453, 98, 20);
 		frame.getContentPane().add(textField_40);
-		
+
 		textField_41 = new JTextField();
 		textField_41.setColumns(10);
 		textField_41.setBounds(684, 453, 100, 20);
 		frame.getContentPane().add(textField_41);
-		
+
 		label = new JLabel("101");
 		label.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label.setBounds(10, 155, 61, 20);
 		frame.getContentPane().add(label);
-		
+
 		label_1 = new JLabel("102");
 		label_1.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_1.setBounds(10, 217, 61, 20);
 		frame.getContentPane().add(label_1);
-		
+
 		label_2 = new JLabel("103");
 		label_2.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_2.setBounds(10, 275, 61, 20);
 		frame.getContentPane().add(label_2);
-		
+
 		label_3 = new JLabel("104");
 		label_3.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_3.setBounds(10, 335, 61, 20);
 		frame.getContentPane().add(label_3);
-		
+
 		label_4 = new JLabel("105");
 		label_4.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_4.setBounds(10, 387, 61, 20);
 		frame.getContentPane().add(label_4);
-		
+
 		label_5 = new JLabel("106");
 		label_5.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_5.setBounds(10, 449, 61, 20);
