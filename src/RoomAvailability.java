@@ -105,19 +105,9 @@ public class RoomAvailability {
 		frame.getContentPane().add(comboBox_1);
 		comboBox_1.addItem("Single Bed");
 		comboBox_1.addItem("Double bed");
-
-		JButton btnSave = new JButton("GET ROOM");
-		btnSave.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				//int k=((Math.random()*(5)) + 1);
-				Random r=new Random();
-				JOptionPane.showMessageDialog(frame1, "Your room no is R000" +(r.nextInt(6)+1)+  " and password is jinit");
-
-			}
-		});
-		btnSave.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnSave.setBounds(182, 454, 251, 31);
-		frame.getContentPane().add(btnSave);
+		
+		
+		
 
 		JLabel label = new JLabel();
 		Image image = new ImageIcon(this.getClass().getResource("/hotel.png")).getImage();
@@ -184,44 +174,59 @@ public class RoomAvailability {
 		JButton btnGetPrice = new JButton("GET PRICE");
 		btnGetPrice.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//			String str=spinner_1.getValue().toString();
-//			String str2=spinner_2.getValue().toString();
-//			System.out.println(""+str);
 
 				String spinnerValue = formater.format((Date) spinner_1.getValue()).toString();
 				String spinnerValue2 = formater.format((Date) spinner_2.getValue()).toString();
-				System.out.println(spinnerValue);
-				System.out.println(spinnerValue2);
-				// if()
+
 				int k = (Integer) spinner.getValue();
-				// if(spinner.getValue()=="1") {
+
 				lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
-				// }
-//				if(spinner.getValue()=="2"){
-//					lblPrice.setText(""+(spinnerValue2.compareTo(spinnerValue))*800);
-//				}
-//				if(spinner.getValue()=="3"){
-//					lblPrice.setText(""+(spinnerValue2.compareTo(spinnerValue))*1000);
-//				}
-//				if(spinner.getValue()=="4"){
-//					lblPrice.setText(""+(spinnerValue2.compareTo(spinnerValue))*1200);
-//				}
-//				
 
-				// System.out.println();
-
-				// Date date=(Date)spinner_1.getValue();
-				// LocalDate localDate = DateConverter.asLocalDate(date);
-				// System.out.println(date);
 			}
 		});
 		btnGetPrice.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnGetPrice.setBounds(28, 400, 251, 31);
 		frame.getContentPane().add(btnGetPrice);
 
-//		JLabel label = new JLabel("New label");
-//		label.setBounds(493, 85, 49, 14);
-//		frame.getContentPane().add(label);
-//		frame.getContentPane().add(new JLabel(new ImageIcon("C:\\Users\\jinit jain\\Desktop\\download")));
+		JButton btnSave = new JButton("GET ROOM");
+		btnSave.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnSave.setBounds(182, 454, 251, 31);
+		frame.getContentPane().add(btnSave);
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Random r = new Random();
+				int ran=(r.nextInt(6) + 1);
+				JOptionPane.showMessageDialog(frame1,
+						"Your room no is R10" + ran + " and password is jinit");
+				String spinnerValue = formater.format((Date) spinner_1.getValue()).toString();
+				String spinnerValue2 = formater.format((Date) spinner_2.getValue()).toString();
+
+				int k = (Integer) spinner.getValue();
+				try {
+					Class.forName("com.mysql.jdbc.Driver");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_management", "root", "root");
+					
+					PreparedStatement pr = con.prepareStatement("insert into bookedroom values(?,?,?,?,?,?,?)");
+					pr.setString(1, "10"+ran);
+					pr.setString(2,textField.getText() );
+					pr.setString(3,comboBox.getSelectedItem().toString());
+					pr.setString(4,comboBox_1.getSelectedItem().toString());
+					pr.setString(5, spinner.getValue().toString());
+					pr.setString(6,""+spinnerValue2.compareTo(spinnerValue) );
+					pr.setString(7,""+ (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
+					int i = pr.executeUpdate();
+					System.out.println("inserted");
+				} catch (ClassNotFoundException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+
+
+			}
+		});
+		
+
 	}
 }
