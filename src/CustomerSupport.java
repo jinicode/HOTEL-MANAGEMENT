@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Image;
 
@@ -55,13 +57,13 @@ public class CustomerSupport {
 	 */
 	public CustomerSupport(int a) {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 984, 630);
+		frame.setBounds(100, 100, 784, 630);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(173, 255, 47));
-		panel.setBounds(41, 11, 781, 571);
+		panel.setBounds(41, 11, 700, 571);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
@@ -73,12 +75,12 @@ public class CustomerSupport {
 		JCheckBox chckbxBurger = new JCheckBox("Burger");
 		chckbxBurger.setBackground(new Color(124, 252, 0));
 		chckbxBurger.setForeground(new Color(0, 0, 0));
-		chckbxBurger.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		chckbxBurger.setFont(new Font("Tahoma", Font.BOLD, 18));
 		chckbxBurger.setBounds(6, 102, 99, 42);
 		panel.add(chckbxBurger);
 
 		JCheckBox chckbxPizza = new JCheckBox("Pizza");
-		chckbxPizza.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		chckbxPizza.setFont(new Font("Tahoma", Font.BOLD, 18));
 		chckbxPizza.setBackground(new Color(124, 252, 0));
 		chckbxPizza.setBounds(6, 170, 99, 34);
 		panel.add(chckbxPizza);
@@ -227,14 +229,14 @@ public class CustomerSupport {
 		lblNewLabel.setForeground(Color.BLUE);
 		lblNewLabel.setBackground(Color.RED);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel.setBounds(505, 478, 123, 27);
+		lblNewLabel.setBounds(132, 7, 71, 27);
 		panel.add(lblNewLabel);
 		lblNewLabel.setText("" + a);
 		
 		JLabel lblFood = new JLabel("");
 		Image image1=new ImageIcon(this.getClass().getResource("/food164.png")).getImage();
 		lblFood.setIcon(new ImageIcon(image1));
-		lblFood.setBounds(224, 31, 93, 71);
+		lblFood.setBounds(251, 31, 93, 71);
 		panel.add(lblFood);
 		
 		JLabel label_8 = new JLabel("");
@@ -242,6 +244,42 @@ public class CustomerSupport {
 		label_8.setIcon(new ImageIcon(image2));
 		label_8.setBounds(17, 24, 93, 71);
 		panel.add(label_8);
+		 
+		JFrame frame1 = new JFrame("Manager Logn");
+		frame1.setTitle("Manager Login");
+		
+		JButton btnCheckout = new JButton("CheckOut");
+		btnCheckout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Class.forName("com.mysql.jdbc.Driver");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_management", "root",
+							"root");
+					String rom=(""+a).toString();
+					PreparedStatement pr = con.prepareStatement("delete from bookedroom where roomno=? ");
+					PreparedStatement pr1 = con.prepareStatement("delete from staff where roomno=? ");
+					pr.setString(1, rom);
+					pr1.setString(1,rom );
+					 pr.executeUpdate();
+					pr1.executeUpdate();
+				} catch (ClassNotFoundException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+				
+
+				JOptionPane.showMessageDialog( frame1,"Our staff would reach out to you soon sir.");
+			}
+		});
+		btnCheckout.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		btnCheckout.setBounds(487, 466, 164, 42);
+		panel.add(btnCheckout);
+		
+		JLabel lblItIsUor = new JLabel("It is our pleasure to serve you!");
+		lblItIsUor.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 24));
+		lblItIsUor.setBounds(287, 520, 378, 31);
+		panel.add(lblItIsUor);
 
 		btnOrder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
