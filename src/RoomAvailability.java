@@ -105,9 +105,6 @@ public class RoomAvailability {
 		frame.getContentPane().add(comboBox_1);
 		comboBox_1.addItem("Single Bed");
 		comboBox_1.addItem("Double bed");
-		
-		
-		
 
 		JLabel label = new JLabel();
 		Image image = new ImageIcon(this.getClass().getResource("/hotel.png")).getImage();
@@ -180,7 +177,28 @@ public class RoomAvailability {
 
 				int k = (Integer) spinner.getValue();
 
-				lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
+				// lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
+				// System.out.println(comboBox.getSelectedItem());
+				if (comboBox.getSelectedItem().toString() == "AC"
+						&& comboBox_1.getSelectedItem().toString() == "Single Bed") {
+					// System.out.println("1");
+					lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
+				}
+				if (comboBox.getSelectedItem().toString() == "Non AC"
+						&& comboBox_1.getSelectedItem().toString() == "Single Bed") {
+					// System.out.println("2");
+					lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 200 * k);
+				}
+				if (comboBox.getSelectedItem().toString() == "AC"
+						&& comboBox_1.getSelectedItem().toString() == "Double bed") {
+					// System.out.println("3");
+					lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 500 * k);
+				}
+				if (comboBox.getSelectedItem().toString() == "Non AC"
+						&& comboBox_1.getSelectedItem().toString() == "Double bed") {
+					// System.out.println("4");
+					lblPrice.setText("" + (spinnerValue2.compareTo(spinnerValue)) * 300 * k);
+				}
 
 			}
 		});
@@ -196,25 +214,25 @@ public class RoomAvailability {
 			public void actionPerformed(ActionEvent e) {
 
 				Random r = new Random();
-				int ran=(r.nextInt(6) + 1);
-				JOptionPane.showMessageDialog(frame1,
-						"Your room no is R10" + ran + " and password is jinit");
+				int ran = (r.nextInt(6) + 1);
+				JOptionPane.showMessageDialog(frame1, "Your room no is R10" + ran + " and password is jinit");
 				String spinnerValue = formater.format((Date) spinner_1.getValue()).toString();
 				String spinnerValue2 = formater.format((Date) spinner_2.getValue()).toString();
 
 				int k = (Integer) spinner.getValue();
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_management", "root", "root");
-					
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_management", "root",
+							"root");
+
 					PreparedStatement pr = con.prepareStatement("insert into bookedroom values(?,?,?,?,?,?,?)");
-					pr.setString(1, "10"+ran);
-					pr.setString(2,textField.getText() );
-					pr.setString(3,comboBox.getSelectedItem().toString());
-					pr.setString(4,comboBox_1.getSelectedItem().toString());
+					pr.setString(1, "10" + ran);
+					pr.setString(2, textField.getText());
+					pr.setString(3, comboBox.getSelectedItem().toString());
+					pr.setString(4, comboBox_1.getSelectedItem().toString());
 					pr.setString(5, spinner.getValue().toString());
-					pr.setString(6,""+spinnerValue2.compareTo(spinnerValue) );
-					pr.setString(7,""+ (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
+					pr.setString(6, "" + spinnerValue2.compareTo(spinnerValue));
+					pr.setString(7, "" + (spinnerValue2.compareTo(spinnerValue)) * 400 * k);
 					int i = pr.executeUpdate();
 					System.out.println("inserted");
 				} catch (ClassNotFoundException e1) {
@@ -223,10 +241,8 @@ public class RoomAvailability {
 					e1.printStackTrace();
 				}
 
-
 			}
 		});
-		
 
 	}
 }

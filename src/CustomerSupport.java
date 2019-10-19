@@ -57,7 +57,7 @@ public class CustomerSupport {
 	 */
 	public CustomerSupport(int a) {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 784, 630);
+		frame.setBounds(100, 50, 784, 630);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
@@ -91,7 +91,7 @@ public class CustomerSupport {
 		chckbxCheeseGarlicBread.setBounds(6, 236, 118, 34);
 		panel.add(chckbxCheeseGarlicBread);
 
-		JCheckBox chckbxMasalaDosa = new JCheckBox(" Dosa");
+		JCheckBox chckbxMasalaDosa = new JCheckBox("Dosa");
 		chckbxMasalaDosa.setFont(new Font("Tahoma", Font.BOLD, 18));
 		chckbxMasalaDosa.setBackground(new Color(124, 252, 0));
 		chckbxMasalaDosa.setBounds(6, 292, 118, 34);
@@ -138,25 +138,25 @@ public class CustomerSupport {
 		lblRs.setBounds(132, 107, 71, 27);
 		panel.add(lblRs);
 
-		JLabel label = new JLabel("80 Rs");
-		label.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label.setBounds(132, 174, 71, 27);
-		panel.add(label);
+		JLabel lblRs_1 = new JLabel("100 Rs");
+		lblRs_1.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblRs_1.setBounds(132, 174, 71, 27);
+		panel.add(lblRs_1);
 
-		JLabel label_1 = new JLabel("80 Rs");
-		label_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label_1.setBounds(130, 236, 71, 27);
-		panel.add(label_1);
+		JLabel lblRs_2 = new JLabel("60 Rs");
+		lblRs_2.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblRs_2.setBounds(130, 236, 71, 27);
+		panel.add(lblRs_2);
 
-		JLabel label_2 = new JLabel("80 Rs");
-		label_2.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label_2.setBounds(132, 292, 71, 27);
-		panel.add(label_2);
+		JLabel lblRs_3 = new JLabel("50 Rs");
+		lblRs_3.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblRs_3.setBounds(132, 292, 71, 27);
+		panel.add(lblRs_3);
 
-		JLabel label_3 = new JLabel("80 Rs");
-		label_3.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label_3.setBounds(132, 352, 71, 27);
-		panel.add(label_3);
+		JLabel lblRs_4 = new JLabel("120 Rs");
+		lblRs_4.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblRs_4.setBounds(132, 352, 71, 27);
+		panel.add(lblRs_4);
 
 		JButton btnOrder = new JButton("Order");
 		btnOrder.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -295,28 +295,28 @@ public class CustomerSupport {
 				}
 				if (chckbxPizza.isSelected()) {
 					for (int i = 1; i <= (Integer) spinner_1.getValue(); i++) {
-						total += 80;
+						total += 100;
 
 					}
 					items += ("Pizza" + "(" + (Integer) spinner_1.getValue() + ")");
 				}
 				if (chckbxCheeseGarlicBread.isSelected()) {
 					for (int i = 1; i <= (Integer) spinner_2.getValue(); i++) {
-						total += 80;
+						total += 60;
 
 					}
-					items += ("Bread" + "(" + (Integer) spinner_2.getValue() + ")");
+					items += ("Sandwich" + "(" + (Integer) spinner_2.getValue() + ")");
 				}
 				if (chckbxMasalaDosa.isSelected()) {
 					for (int i = 1; i <= (Integer) spinner_3.getValue(); i++) {
-						total += 80;
+						total += 50;
 
 					}
-					items += ("PavBhaji" + "(" + (Integer) spinner_3.getValue() + ")");
+					items += ("Dosa" + "(" + (Integer) spinner_3.getValue() + ")");
 				}
 				if (chckbxPavBhaji.isSelected()) {
 					for (int i = 1; i <= (Integer) spinner_4.getValue(); i++) {
-						total += 80;
+						total += 120;
 
 					}
 					items += ("PavBhaji" + "(" + (Integer) spinner_4.getValue() + ")");
