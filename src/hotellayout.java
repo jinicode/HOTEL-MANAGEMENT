@@ -69,8 +69,7 @@ public class hotellayout extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				ManagerLogin managerLogin = new ManagerLogin();
 				managerLogin.main(null);
-				System.out.println("hello");
-			}
+				}
 		});
 		btnManager.setFont(new Font("Times New Roman", Font.PLAIN, 18));
 		btnManager.setBounds(186, 67, 208, 51);

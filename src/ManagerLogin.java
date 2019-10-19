@@ -55,7 +55,8 @@ public class ManagerLogin {
 		frame.setBounds(100, 100, 658, 421);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		JFrame frame1 = new JFrame("JPasswordField Demo");
+		JFrame frame1 = new JFrame("Manager Logn");
+		frame1.setTitle("Manager Login");
 		JLabel lblLoginWithCorrect = new JLabel("Login to access Receptionist's Account");
 		lblLoginWithCorrect.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblLoginWithCorrect.setBounds(95, 11, 377, 52);
@@ -82,14 +83,12 @@ public class ManagerLogin {
 				String j="jinit";
 				if(username.equals(j) && password.equals(j))
 				{   
-					JOptionPane.showMessageDialog( frame1,"Succesfully Logged In");	
 					
-					System.out.println("hello");
 					ManagerInfoScreen managerInfoScreen=new ManagerInfoScreen();
 					managerInfoScreen.main(null);
 					}else
 				{
-					JOptionPane.showMessageDialog( frame1,"Failed to log In");
+					JOptionPane.showMessageDialog( frame1,"Invalid credentials");
 				}
 			}
 		});
