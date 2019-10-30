@@ -8,3 +8,8 @@ The Staff Login layout is for staff to let them know what is ordered from which 
 
  Feel free to clone and add extra features if posssible.\
  THANK YOU :)
+ Extra features which needs to bea added\
+ Generating a pdf of the bill generated when the customer orders food.\
+ Doing something with the payment system.\
+ Also storing customer's phone number and messing with it\
+ 
